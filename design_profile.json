@@ -1,0 +1,334 @@
+{
+  "design_system": {
+    "name": "Medical Dashboard Design System",
+    "theme": "dark",
+    "color_palette": {
+      "primary": {
+        "background": "#1a1b2e",
+        "surface": "#16213e",
+        "card": "#0f1829"
+      },
+      "accent_colors": {
+        "teal": "#00d4aa",
+        "green": "#4caf50", 
+        "yellow": "#ffc107",
+        "purple": "#9c27b0",
+        "blue": "#2196f3"
+      },
+      "text": {
+        "primary": "#ffffff",
+        "secondary": "#b0bec5",
+        "muted": "#78909c"
+      },
+      "status": {
+        "success": "#4caf50",
+        "warning": "#ff9800",
+        "info": "#2196f3"
+      }
+    },
+    "typography": {
+      "font_family": "Segoe UI, Arial, sans-serif",
+      "sizes": {
+        "h1": 24,
+        "h2": 20,
+        "h3": 16,
+        "body": 14,
+        "caption": 12,
+        "small": 10
+      },
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "bold": 700
+      }
+    },
+    "spacing": {
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "xxl": 48
+    },
+    "border_radius": {
+      "small": 4,
+      "medium": 8,
+      "large": 12,
+      "xlarge": 16
+    },
+    "shadows": {
+      "card": "0 2px 8px rgba(0,0,0,0.3)",
+      "elevated": "0 4px 16px rgba(0,0,0,0.4)"
+    }
+  },
+  "layout_structure": {
+    "container": {
+      "type": "grid",
+      "padding": 24,
+      "gap": 16,
+      "background": "#1a1b2e"
+    },
+    "grid_areas": [
+      {
+        "name": "calendar",
+        "position": "top-left",
+        "grid": "row 1, col 1",
+        "size": "compact"
+      },
+      {
+        "name": "chart_in_patient",
+        "position": "top-center",
+        "grid": "row 1, col 2",
+        "size": "medium"
+      },
+      {
+        "name": "chart_out_patient", 
+        "position": "top-right",
+        "grid": "row 1, col 3",
+        "size": "medium"
+      },
+      {
+        "name": "stat_cards",
+        "position": "middle",
+        "grid": "row 2, col 1-3",
+        "size": "full-width"
+      },
+      {
+        "name": "appointments_table",
+        "position": "bottom",
+        "grid": "row 3, col 1-3", 
+        "size": "full-width"
+      }
+    ]
+  },
+  "components": {
+    "calendar_widget": {
+      "type": "calendar",
+      "style": {
+        "background": "#16213e",
+        "border_radius": 12,
+        "padding": 16,
+        "text_color": "#ffffff",
+        "header_color": "#b0bec5",
+        "selected_day_bg": "#2196f3",
+        "selected_day_text": "#ffffff",
+        "current_day_indicator": "#00d4aa"
+      },
+      "structure": {
+        "header": {
+          "month_year": "January 2024",
+          "navigation_arrows": true
+        },
+        "weekdays": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
+        "grid": "7x6",
+        "interactive": true
+      }
+    },
+    "bar_chart": {
+      "type": "chart",
+      "chart_type": "bar",
+      "style": {
+        "background": "#16213e",
+        "border_radius": 12,
+        "padding": 16,
+        "bar_colors": ["#00d4aa", "#4caf50"],
+        "text_color": "#ffffff",
+        "grid_lines": false
+      },
+      "structure": {
+        "title": {
+          "position": "top-left",
+          "style": "h3"
+        },
+        "value_display": {
+          "position": "top-right", 
+          "style": "h1",
+          "includes_percentage": true
+        },
+        "x_axis_labels": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
+        "animation": "slide_up"
+      }
+    },
+    "stat_card": {
+      "type": "metric_card",
+      "style": {
+        "border_radius": 12,
+        "padding": 16,
+        "min_height": 80,
+        "icon_size": 24,
+        "gradient": true
+      },
+      "variants": [
+        {
+          "name": "revenue",
+          "background": "linear-gradient(135deg, #2196f3, #1976d2)",
+          "icon": "dollar",
+          "icon_color": "#ffffff"
+        },
+        {
+          "name": "patients", 
+          "background": "linear-gradient(135deg, #4caf50, #388e3c)",
+          "icon": "person",
+          "icon_color": "#ffffff"
+        },
+        {
+          "name": "appointments",
+          "background": "linear-gradient(135deg, #ffc107, #f57c00)", 
+          "icon": "calendar",
+          "icon_color": "#ffffff"
+        },
+        {
+          "name": "lab_results",
+          "background": "linear-gradient(135deg, #9c27b0, #7b1fa2)",
+          "icon": "lab",
+          "icon_color": "#ffffff"
+        }
+      ],
+      "structure": {
+        "icon": {
+          "position": "left",
+          "alignment": "center"
+        },
+        "content": {
+          "title": {
+            "style": "caption",
+            "color": "#ffffff"
+          },
+          "value": {
+            "style": "h2", 
+            "color": "#ffffff",
+            "weight": "bold"
+          }
+        }
+      }
+    },
+    "data_table": {
+      "type": "table",
+      "style": {
+        "background": "#16213e",
+        "border_radius": 12,
+        "padding": 16,
+        "row_height": 48,
+        "header_bg": "transparent",
+        "row_hover": "#1a2332",
+        "border_color": "#2a3441"
+      },
+      "structure": {
+        "header": {
+          "title": "Appointments",
+          "actions": [
+            {
+              "type": "dropdown",
+              "text": "This Week",
+              "style": "primary_button"
+            },
+            {
+              "type": "link", 
+              "text": "View All",
+              "style": "text_link"
+            }
+          ]
+        },
+        "columns": [
+          {
+            "name": "Sr.No",
+            "width": "60px",
+            "alignment": "left"
+          },
+          {
+            "name": "MR Number", 
+            "width": "120px",
+            "alignment": "left"
+          },
+          {
+            "name": "Patient Name",
+            "width": "200px", 
+            "alignment": "left"
+          },
+          {
+            "name": "Status",
+            "width": "150px",
+            "alignment": "left",
+            "type": "badge"
+          }
+        ],
+        "row_styling": {
+          "alternating": false,
+          "hover_effect": true,
+          "status_badges": {
+            "routine_checkup": {
+              "background": "#4caf50",
+              "text_color": "#ffffff",
+              "border_radius": 16
+            },
+            "elective": {
+              "background": "#2196f3", 
+              "text_color": "#ffffff",
+              "border_radius": 16
+            }
+          }
+        }
+      }
+    }
+  },
+  "tkinter_implementation_guide": {
+    "main_window": {
+      "geometry": "1200x800",
+      "bg": "#1a1b2e",
+      "resizable": true
+    },
+    "required_imports": [
+      "tkinter as tk",
+      "tkinter.ttk as ttk", 
+      "matplotlib.pyplot as plt",
+      "matplotlib.backends.backend_tkagg",
+      "PIL (Pillow) for icons",
+      "datetime for calendar functionality"
+    ],
+    "layout_manager": "grid",
+    "custom_widgets": {
+      "calendar": {
+        "base": "tk.Frame",
+        "implementation": "Custom calendar using grid of buttons",
+        "styling": "Configure button styles for days, selected state"
+      },
+      "charts": {
+        "base": "matplotlib figure embedded in tkinter", 
+        "implementation": "FigureCanvasTkAgg for chart rendering",
+        "styling": "Configure matplotlib theme to match dark theme"
+      },
+      "stat_cards": {
+        "base": "tk.Frame with gradient background",
+        "implementation": "Canvas widget for gradient effects",
+        "styling": "Custom draw methods for gradients and icons"
+      },
+      "table": {
+        "base": "ttk.Treeview",
+        "implementation": "Configure columns and styling",
+        "styling": "Custom ttk.Style for dark theme"
+      }
+    },
+    "responsive_design": {
+      "grid_weights": "Configure column and row weights for resizing",
+      "min_sizes": "Set minimum window dimensions", 
+      "scaling": "Use relative sizing with padx/pady"
+    },
+    "theming": {
+      "ttk_style": "Create custom ttk.Style() for consistent theming",
+      "color_constants": "Define color palette as constants",
+      "font_setup": "Configure font families and sizes globally"
+    }
+  },
+  "animation_effects": {
+    "chart_bars": "Gradual height increase on load",
+    "hover_states": "Color transitions on mouse over",
+    "card_highlights": "Subtle glow effects on selection",
+    "table_rows": "Smooth background color changes"
+  },
+  "accessibility": {
+    "contrast_ratios": "WCAG AA compliant text contrast",
+    "keyboard_navigation": "Tab order and focus indicators",
+    "screen_reader": "Proper labeling for assistive technology"
+  }
+}
