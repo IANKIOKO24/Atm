@@ -1,0 +1,426 @@
+{
+  "design_profile": {
+    "theme": {
+      "name": "Dark Academic Dashboard",
+      "description": "Modern dark-themed administrative interface with blue accent colors",
+      "color_palette": {
+        "primary_background": "#1a1b23",
+        "secondary_background": "#2a2d3a",
+        "surface_background": "#363a4f",
+        "accent_primary": "#4a90e2",
+        "accent_secondary": "#5ba7f7",
+        "text_primary": "#ffffff",
+        "text_secondary": "#b8bcc8",
+        "text_muted": "#6b7280",
+        "success": "#10b981",
+        "warning": "#f59e0b",
+        "error": "#ef4444",
+        "border_subtle": "#374151",
+        "hover_state": "#4b5563"
+      },
+      "typography": {
+        "font_family": "Segoe UI, Arial, sans-serif",
+        "heading_large": {
+          "size": 24,
+          "weight": "bold",
+          "color": "#ffffff"
+        },
+        "heading_medium": {
+          "size": 18,
+          "weight": "semibold",
+          "color": "#ffffff"
+        },
+        "body_regular": {
+          "size": 14,
+          "weight": "normal",
+          "color": "#b8bcc8"
+        },
+        "body_small": {
+          "size": 12,
+          "weight": "normal",
+          "color": "#6b7280"
+        },
+        "link": {
+          "size": 14,
+          "weight": "normal",
+          "color": "#4a90e2",
+          "decoration": "underline"
+        }
+      },
+      "spacing": {
+        "xs": 4,
+        "sm": 8,
+        "md": 16,
+        "lg": 24,
+        "xl": 32,
+        "xxl": 48
+      },
+      "border_radius": {
+        "small": 4,
+        "medium": 8,
+        "large": 12,
+        "pill": 999
+      }
+    },
+    "layout_structure": {
+      "container": {
+        "type": "main_container",
+        "background": "#1a1b23",
+        "padding": 24,
+        "full_screen": true
+      },
+      "header_section": {
+        "type": "header_bar",
+        "height": 80,
+        "background": "#1a1b23",
+        "elements": [
+          {
+            "type": "page_title",
+            "text": "Students List",
+            "position": "left",
+            "typography": "heading_large"
+          },
+          {
+            "type": "breadcrumb",
+            "position": "left_below_title",
+            "items": ["Dashboard", "Students", "All Students"],
+            "separator": "/",
+            "typography": "body_small"
+          },
+          {
+            "type": "action_buttons",
+            "position": "right",
+            "buttons": [
+              {
+                "type": "export_button",
+                "style": "secondary",
+                "icon": "download",
+                "text": "Export",
+                "dropdown": true
+              },
+              {
+                "type": "add_button",
+                "style": "primary",
+                "icon": "plus",
+                "text": "Add Student",
+                "color": "#4a90e2"
+              }
+            ]
+          }
+        ]
+      },
+      "control_bar": {
+        "type": "control_section",
+        "height": 60,
+        "background": "#1a1b23",
+        "margin_bottom": 16,
+        "elements": [
+          {
+            "type": "list_title",
+            "text": "Students List",
+            "position": "left",
+            "typography": "heading_medium"
+          },
+          {
+            "type": "date_range_picker",
+            "position": "center_left",
+            "default_text": "07/17/2025 - 07/23/2025",
+            "style": "outlined"
+          },
+          {
+            "type": "filter_dropdown",
+            "position": "center",
+            "text": "Filter",
+            "icon": "filter"
+          },
+          {
+            "type": "view_toggles",
+            "position": "center_right",
+            "options": ["list", "grid"]
+          },
+          {
+            "type": "sort_dropdown",
+            "position": "right",
+            "text": "Sort by A-Z",
+            "icon": "sort"
+          }
+        ]
+      },
+      "data_table": {
+        "type": "data_table",
+        "background": "#2a2d3a",
+        "border_radius": 8,
+        "structure": {
+          "pagination_top": {
+            "type": "pagination_controls",
+            "position": "top_left",
+            "elements": [
+              {
+                "type": "rows_per_page",
+                "label": "Row Per Page",
+                "value": 10,
+                "dropdown": true
+              },
+              {
+                "type": "entries_info",
+                "text": "Entries"
+              }
+            ]
+          },
+          "search_bar": {
+            "type": "search_input",
+            "position": "top_right",
+            "placeholder": "Search",
+            "width": 200
+          },
+          "table_header": {
+            "type": "table_header",
+            "background": "#363a4f",
+            "height": 48,
+            "columns": [
+              {
+                "name": "checkbox",
+                "type": "checkbox",
+                "width": 40,
+                "sortable": false
+              },
+              {
+                "name": "admission_no",
+                "label": "Admission No",
+                "type": "text",
+                "width": 120,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "roll_no",
+                "label": "Roll No",
+                "type": "text",
+                "width": 100,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "name",
+                "label": "Name",
+                "type": "text_with_avatar",
+                "width": 150,
+                "sortable": false
+              },
+              {
+                "name": "class",
+                "label": "Class",
+                "type": "text",
+                "width": 80,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "section",
+                "label": "Section",
+                "type": "text",
+                "width": 80,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "gender",
+                "label": "Gender",
+                "type": "text",
+                "width": 80,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "status",
+                "label": "Status",
+                "type": "badge",
+                "width": 100,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "date_of_join",
+                "label": "Date of Join",
+                "type": "date",
+                "width": 120,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "dob",
+                "label": "DOB",
+                "type": "date",
+                "width": 120,
+                "sortable": true,
+                "sort_icon": true
+              },
+              {
+                "name": "actions",
+                "label": "Actions",
+                "type": "actions",
+                "width": 80,
+                "sortable": false
+              }
+            ]
+          },
+          "table_rows": {
+            "type": "table_rows",
+            "row_height": 56,
+            "alternate_background": true,
+            "hover_effect": true,
+            "row_backgrounds": ["#2a2d3a", "#323544"]
+          }
+        }
+      }
+    },
+    "component_styles": {
+      "buttons": {
+        "primary": {
+          "background": "#4a90e2",
+          "text_color": "#ffffff",
+          "border": "none",
+          "border_radius": 6,
+          "padding": "8px 16px",
+          "font_weight": "medium",
+          "hover_background": "#3a7bc8"
+        },
+        "secondary": {
+          "background": "transparent",
+          "text_color": "#b8bcc8",
+          "border": "1px solid #374151",
+          "border_radius": 6,
+          "padding": "8px 16px",
+          "font_weight": "medium",
+          "hover_background": "#374151"
+        }
+      },
+      "inputs": {
+        "search_input": {
+          "background": "#363a4f",
+          "border": "1px solid #4b5563",
+          "border_radius": 6,
+          "padding": "8px 12px",
+          "text_color": "#ffffff",
+          "placeholder_color": "#6b7280",
+          "focus_border": "#4a90e2"
+        },
+        "dropdown": {
+          "background": "#363a4f",
+          "border": "1px solid #4b5563",
+          "border_radius": 6,
+          "padding": "8px 12px",
+          "text_color": "#ffffff",
+          "arrow_color": "#6b7280"
+        }
+      },
+      "badges": {
+        "active": {
+          "background": "#10b981",
+          "text_color": "#ffffff",
+          "border_radius": 4,
+          "padding": "4px 8px",
+          "font_size": 12,
+          "font_weight": "medium"
+        },
+        "inactive": {
+          "background": "#ef4444",
+          "text_color": "#ffffff",
+          "border_radius": 4,
+          "padding": "4px 8px",
+          "font_size": 12,
+          "font_weight": "medium"
+        }
+      },
+      "avatars": {
+        "user_avatar": {
+          "size": 32,
+          "border_radius": "50%",
+          "border": "2px solid #4b5563",
+          "margin_right": 8
+        }
+      },
+      "table": {
+        "header_cell": {
+          "background": "#363a4f",
+          "text_color": "#ffffff",
+          "font_weight": "semibold",
+          "padding": "12px 16px",
+          "border_bottom": "1px solid #4b5563"
+        },
+        "data_cell": {
+          "padding": "12px 16px",
+          "text_color": "#b8bcc8",
+          "border_bottom": "1px solid #374151"
+        },
+        "checkbox": {
+          "size": 16,
+          "border": "2px solid #4b5563",
+          "border_radius": 3,
+          "checked_background": "#4a90e2",
+          "checked_border": "#4a90e2"
+        }
+      },
+      "icons": {
+        "size_small": 16,
+        "size_medium": 20,
+        "size_large": 24,
+        "color_default": "#6b7280",
+        "color_active": "#4a90e2",
+        "color_primary": "#ffffff"
+      }
+    },
+    "interactive_states": {
+      "hover": {
+        "button_primary": "#3a7bc8",
+        "button_secondary": "#374151",
+        "table_row": "#323544",
+        "link": "#5ba7f7"
+      },
+      "active": {
+        "button_primary": "#2563eb",
+        "table_row": "#4b5563"
+      },
+      "focus": {
+        "input_border": "#4a90e2",
+        "button_outline": "#4a90e2"
+      },
+      "disabled": {
+        "background": "#374151",
+        "text_color": "#6b7280",
+        "border": "#4b5563"
+      }
+    },
+    "animations": {
+      "hover_transition": "0.2s ease",
+      "button_press": "0.1s ease",
+      "dropdown_open": "0.3s ease-out",
+      "loading_fade": "0.5s ease-in-out"
+    },
+    "tkinter_implementation_notes": {
+      "fonts": {
+        "suggestion": "Use ('Segoe UI', 14) for body text, ('Segoe UI', 18, 'bold') for headings",
+        "fallback": "Use system default if Segoe UI unavailable"
+      },
+      "colors": {
+        "note": "All colors provided in hex format, compatible with tkinter color specifications"
+      },
+      "layout_manager": {
+        "recommendation": "Use grid() for table structure, pack() for header elements, place() for overlays",
+        "table_approach": "Consider using Treeview widget for the data table with custom styling"
+      },
+      "custom_widgets": {
+        "suggestions": [
+          "Create custom button class with hover effects using bind events",
+          "Implement custom dropdown using Combobox with styling",
+          "Use Canvas for rounded corners if needed",
+          "Implement avatar display using PhotoImage with circular masking"
+        ]
+      },
+      "responsive_design": {
+        "note": "Configure grid weights and sticky options for responsive behavior",
+        "column_sizing": "Use minsize and weight parameters for consistent column widths"
+      }
+    }
+  }
+}
