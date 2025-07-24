@@ -6,24 +6,24 @@
   },
   "color_palette": {
     "background": {
-      "primary": "#1a1a1a",
-      "secondary": "#2a2a2a",
-      "tertiary": "#333333"
+      "primary": "#0d1117",
+      "secondary": "#161b22",
+      "tertiary": "#21262d"
     },
     "text": {
-      "primary": "#ffffff",
-      "secondary": "#b0b0b0",
-      "muted": "#808080"
+      "primary": "#f0f6fc",
+      "secondary": "#7d8590",
+      "muted": "#656d76"
     },
     "accent": {
-      "blue": "#4f7fff",
-      "success": "#22c55e",
-      "danger": "#ef4444",
-      "warning": "#f59e0b"
+      "blue": "#238636",
+      "success": "#238636",
+      "danger": "#da3633",
+      "warning": "#fb8500"
     },
     "borders": {
-      "subtle": "#404040",
-      "focus": "#4f7fff"
+      "subtle": "#30363d",
+      "focus": "#238636"
     }
   },
   "typography": {
@@ -47,19 +47,19 @@
     "header": {
       "height": 80,
       "padding": {"horizontal": 24, "vertical": 16},
-      "background": "#1a1a1a",
+      "background": "#0d1117",
       "elements": [
         {
           "type": "title",
           "text": "Students List",
           "position": "left",
-          "style": {"size": 24, "weight": "semibold", "color": "#ffffff"}
+          "style": {"size": 24, "weight": "semibold", "color": "#f0f6fc"}
         },
         {
           "type": "breadcrumb",
           "items": ["Dashboard", "Students", "All Students"],
           "position": "left_below_title",
-          "style": {"size": 12, "color": "#808080"}
+          "style": {"size": 12, "color": "#7d8590"}
         },
         {
           "type": "action_buttons",
@@ -94,7 +94,7 @@
     "toolbar": {
       "height": 60,
       "padding": {"horizontal": 24, "vertical": 12},
-      "background": "#2a2a2a",
+      "background": "#161b22",
       "elements": [
         {
           "type": "section_title",
@@ -127,7 +127,7 @@
     "controls": {
       "height": 40,
       "padding": {"horizontal": 24, "vertical": 8},
-      "background": "#1a1a1a",
+      "background": "#0d1117",
       "elements": [
         {
           "type": "pagination_control",
@@ -149,22 +149,22 @@
       ]
     },
     "table": {
-      "background": "#1a1a1a",
+      "background": "#0d1117",
       "border_radius": 8,
       "headers": {
         "height": 48,
-        "background": "#2a2a2a",
-        "text_color": "#ffffff",
+        "background": "#161b22",
+        "text_color": "#f0f6fc",
         "font_weight": "medium"
       },
       "rows": {
         "height": 56,
         "alternating_colors": false,
-        "hover_color": "#333333",
-        "selected_color": "#4f7fff20"
+        "hover_color": "#21262d",
+        "selected_color": "#23863620"
       },
       "borders": {
-        "color": "#404040",
+        "color": "#30363d",
         "width": 1
       }
     }
@@ -172,7 +172,7 @@
   "components": {
     "buttons": {
       "primary": {
-        "background": "#4f7fff",
+        "background": "#238636",
         "text_color": "#ffffff",
         "border_radius": 6,
         "padding": {"horizontal": 16, "vertical": 8},
@@ -180,8 +180,8 @@
       },
       "ghost": {
         "background": "transparent",
-        "text_color": "#b0b0b0",
-        "border": "1px solid #404040",
+        "text_color": "#7d8590",
+        "border": "1px solid #30363d",
         "border_radius": 6,
         "padding": {"horizontal": 12, "vertical": 8},
         "hover_effect": "background_lighten"
@@ -197,43 +197,43 @@
       "checkbox": {
         "size": 16,
         "border_radius": 3,
-        "border_color": "#404040",
-        "checked_color": "#4f7fff"
+        "border_color": "#30363d",
+        "checked_color": "#238636"
       },
       "avatar": {
         "size": 32,
         "border_radius": "50%",
-        "border": "2px solid #404040"
+        "border": "2px solid #30363d"
       },
       "status_badge": {
         "height": 20,
         "border_radius": 10,
         "padding": {"horizontal": 8, "vertical": 2},
         "variants": {
-          "active": {"background": "#22c55e", "text": "#ffffff"},
-          "inactive": {"background": "#ef4444", "text": "#ffffff"}
+          "active": {"background": "#238636", "text": "#ffffff"},
+          "inactive": {"background": "#da3633", "text": "#ffffff"}
         }
       },
       "link_text": {
-        "color": "#4f7fff",
+        "color": "#238636",
         "hover_effect": "underline"
       }
     },
     "form_elements": {
       "dropdown": {
         "height": 36,
-        "background": "#2a2a2a",
-        "border": "1px solid #404040",
+        "background": "#161b22",
+        "border": "1px solid #30363d",
         "border_radius": 6,
         "padding": {"horizontal": 12, "vertical": 8}
       },
       "search_input": {
         "height": 36,
-        "background": "#2a2a2a",
-        "border": "1px solid #404040",
+        "background": "#161b22",
+        "border": "1px solid #30363d",
         "border_radius": 6,
         "padding": {"horizontal": 12, "vertical": 8},
-        "placeholder_color": "#808080"
+        "placeholder_color": "#656d76"
       }
     }
   },
@@ -341,16 +341,16 @@
       "selection": "CTkCheckBox in first column",
       "hover_effect": "Configure hover_color property"
     },
-    "styling_configuration": {
-      "custom_colors": {
-        "fg_color": "#2a2a2a",
-        "hover_color": "#333333",
-        "border_color": "#404040",
-        "button_color": "#4f7fff",
-        "button_hover_color": "#6b8fff",
-        "text_color": "#ffffff",
-        "text_color_disabled": "#808080"
-      },
+         "styling_configuration": {
+       "custom_colors": {
+         "fg_color": "#161b22",
+         "hover_color": "#21262d",
+         "border_color": "#30363d",
+         "button_color": "#238636",
+         "button_hover_color": "#2ea043",
+         "text_color": "#f0f6fc",
+         "text_color_disabled": "#656d76"
+       },
       "fonts": {
         "title_font": "ctk.CTkFont(family='Inter', size=24, weight='bold')",
         "heading_font": "ctk.CTkFont(family='Inter', size=18, weight='normal')",
@@ -359,90 +359,90 @@
       }
     },
     "component_examples": {
-      "primary_button": {
-        "widget": "ctk.CTkButton",
-        "properties": {
-          "fg_color": "#4f7fff",
-          "hover_color": "#6b8fff",
-          "border_width": 0,
-          "corner_radius": 6,
-          "font": "ctk.CTkFont(size=14, weight='normal')",
-          "text_color": "#ffffff"
-        }
-      },
-      "ghost_button": {
-        "widget": "ctk.CTkButton",
-        "properties": {
-          "fg_color": "transparent",
-          "hover_color": "#333333",
-          "border_width": 1,
-          "border_color": "#404040",
-          "corner_radius": 6,
-          "font": "ctk.CTkFont(size=14, weight='normal')",
-          "text_color": "#b0b0b0"
-        }
-      },
-      "search_entry": {
-        "widget": "ctk.CTkEntry",
-        "properties": {
-          "fg_color": "#2a2a2a",
-          "border_color": "#404040",
-          "corner_radius": 6,
-          "font": "ctk.CTkFont(size=14, weight='normal')",
-          "text_color": "#ffffff",
-          "placeholder_text_color": "#808080"
-        }
-      },
-      "dropdown": {
-        "widget": "ctk.CTkComboBox",
-        "properties": {
-          "fg_color": "#2a2a2a",
-          "border_color": "#404040",
-          "button_color": "#404040",
-          "button_hover_color": "#555555",
-          "corner_radius": 6,
-          "font": "ctk.CTkFont(size=14, weight='normal')",
-          "text_color": "#ffffff"
-        }
-      },
-      "data_frame": {
-        "widget": "ctk.CTkFrame",
-        "properties": {
-          "fg_color": "#1a1a1a",
-          "border_width": 1,
-          "border_color": "#404040",
-          "corner_radius": 8
-        }
-      },
-      "table_header": {
-        "widget": "ctk.CTkFrame",
-        "properties": {
-          "fg_color": "#2a2a2a",
-          "corner_radius": 0,
-          "height": 48
-        }
-      },
-      "table_row": {
-        "widget": "ctk.CTkFrame",
-        "properties": {
-          "fg_color": "#1a1a1a",
-          "hover_color": "#333333",
-          "corner_radius": 0,
-          "height": 56,
-          "border_width": 0
-        }
-      },
-      "status_badge": {
-        "widget": "ctk.CTkLabel",
-        "properties": {
-          "fg_color": "#22c55e",
-          "corner_radius": 10,
-          "font": "ctk.CTkFont(size=12, weight='normal')",
-          "text_color": "#ffffff",
-          "width": 60,
-          "height": 20
-        }
-      },
+             "primary_button": {
+         "widget": "ctk.CTkButton",
+         "properties": {
+           "fg_color": "#238636",
+           "hover_color": "#2ea043",
+           "border_width": 0,
+           "corner_radius": 6,
+           "font": "ctk.CTkFont(size=14, weight='normal')",
+           "text_color": "#ffffff"
+         }
+       },
+       "ghost_button": {
+         "widget": "ctk.CTkButton",
+         "properties": {
+           "fg_color": "transparent",
+           "hover_color": "#21262d",
+           "border_width": 1,
+           "border_color": "#30363d",
+           "corner_radius": 6,
+           "font": "ctk.CTkFont(size=14, weight='normal')",
+           "text_color": "#7d8590"
+         }
+       },
+       "search_entry": {
+         "widget": "ctk.CTkEntry",
+         "properties": {
+           "fg_color": "#161b22",
+           "border_color": "#30363d",
+           "corner_radius": 6,
+           "font": "ctk.CTkFont(size=14, weight='normal')",
+           "text_color": "#f0f6fc",
+           "placeholder_text_color": "#656d76"
+         }
+       },
+       "dropdown": {
+         "widget": "ctk.CTkComboBox",
+         "properties": {
+           "fg_color": "#161b22",
+           "border_color": "#30363d",
+           "button_color": "#30363d",
+           "button_hover_color": "#21262d",
+           "corner_radius": 6,
+           "font": "ctk.CTkFont(size=14, weight='normal')",
+           "text_color": "#f0f6fc"
+         }
+       },
+       "data_frame": {
+         "widget": "ctk.CTkFrame",
+         "properties": {
+           "fg_color": "#0d1117",
+           "border_width": 1,
+           "border_color": "#30363d",
+           "corner_radius": 8
+         }
+       },
+       "table_header": {
+         "widget": "ctk.CTkFrame",
+         "properties": {
+           "fg_color": "#161b22",
+           "corner_radius": 0,
+           "height": 48
+         }
+       },
+       "table_row": {
+         "widget": "ctk.CTkFrame",
+         "properties": {
+           "fg_color": "#0d1117",
+           "hover_color": "#21262d",
+           "corner_radius": 0,
+           "height": 56,
+           "border_width": 0
+         }
+       },
+       "status_badge": {
+         "widget": "ctk.CTkLabel",
+         "properties": {
+           "fg_color": "#238636",
+           "corner_radius": 10,
+           "font": "ctk.CTkFont(size=12, weight='normal')",
+           "text_color": "#ffffff",
+           "width": 60,
+           "height": 20
+         }
+       },
       "avatar_frame": {
         "widget": "ctk.CTkFrame",
         "properties": {
@@ -470,18 +470,18 @@
       "Use transparent fg_color for ghost/invisible containers",
       "Bind events to frames for row selection/hover effects"
     ],
-    "sample_color_scheme": {
-      "background_primary": "#1a1a1a",
-      "background_secondary": "#2a2a2a", 
-      "background_tertiary": "#333333",
-      "border_color": "#404040",
-      "accent_blue": "#4f7fff",
-      "accent_blue_hover": "#6b8fff",
-      "success_green": "#22c55e",
-      "danger_red": "#ef4444",
-      "text_primary": "#ffffff",
-      "text_secondary": "#b0b0b0",
-      "text_muted": "#808080"
-    }
+         "sample_color_scheme": {
+       "background_primary": "#0d1117",
+       "background_secondary": "#161b22", 
+       "background_tertiary": "#21262d",
+       "border_color": "#30363d",
+       "accent_green": "#238636",
+       "accent_green_hover": "#2ea043",
+       "success_green": "#238636",
+       "danger_red": "#da3633",
+       "text_primary": "#f0f6fc",
+       "text_secondary": "#7d8590",
+       "text_muted": "#656d76"
+     }
   }
 }
