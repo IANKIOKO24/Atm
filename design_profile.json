@@ -1,0 +1,338 @@
+{
+  "design_system": {
+    "name": "Students List Dashboard",
+    "type": "dark_theme_admin_interface",
+    "description": "Modern dark-themed administrative dashboard with table-based data display"
+  },
+  "color_palette": {
+    "background": {
+      "primary": "#1a1a1a",
+      "secondary": "#2a2a2a",
+      "tertiary": "#333333"
+    },
+    "text": {
+      "primary": "#ffffff",
+      "secondary": "#b0b0b0",
+      "muted": "#808080"
+    },
+    "accent": {
+      "blue": "#4f7fff",
+      "success": "#22c55e",
+      "danger": "#ef4444",
+      "warning": "#f59e0b"
+    },
+    "borders": {
+      "subtle": "#404040",
+      "focus": "#4f7fff"
+    }
+  },
+  "typography": {
+    "font_family": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "sizes": {
+      "title": 24,
+      "heading": 18,
+      "body": 14,
+      "small": 12,
+      "caption": 10
+    },
+    "weights": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+  "layout": {
+    "header": {
+      "height": 80,
+      "padding": {"horizontal": 24, "vertical": 16},
+      "background": "#1a1a1a",
+      "elements": [
+        {
+          "type": "title",
+          "text": "Students List",
+          "position": "left",
+          "style": {"size": 24, "weight": "semibold", "color": "#ffffff"}
+        },
+        {
+          "type": "breadcrumb",
+          "items": ["Dashboard", "Students", "All Students"],
+          "position": "left_below_title",
+          "style": {"size": 12, "color": "#808080"}
+        },
+        {
+          "type": "action_buttons",
+          "position": "right",
+          "buttons": [
+            {
+              "type": "icon_button",
+              "icon": "refresh",
+              "variant": "ghost"
+            },
+            {
+              "type": "icon_button", 
+              "icon": "print",
+              "variant": "ghost"
+            },
+            {
+              "type": "dropdown_button",
+              "text": "Export",
+              "icon": "download",
+              "variant": "ghost"
+            },
+            {
+              "type": "primary_button",
+              "text": "Add Student",
+              "icon": "plus",
+              "variant": "primary"
+            }
+          ]
+        }
+      ]
+    },
+    "toolbar": {
+      "height": 60,
+      "padding": {"horizontal": 24, "vertical": 12},
+      "background": "#2a2a2a",
+      "elements": [
+        {
+          "type": "section_title",
+          "text": "Students List",
+          "position": "left"
+        },
+        {
+          "type": "date_range",
+          "position": "left_center",
+          "format": "MM/DD/YYYY - MM/DD/YYYY"
+        },
+        {
+          "type": "filter_button",
+          "text": "Filter",
+          "icon": "filter",
+          "position": "center_left"
+        },
+        {
+          "type": "view_toggle",
+          "options": ["list", "grid"],
+          "position": "center_right"
+        },
+        {
+          "type": "sort_dropdown",
+          "text": "Sort by A-Z",
+          "position": "right"
+        }
+      ]
+    },
+    "controls": {
+      "height": 40,
+      "padding": {"horizontal": 24, "vertical": 8},
+      "background": "#1a1a1a",
+      "elements": [
+        {
+          "type": "pagination_control",
+          "label": "Row Per Page",
+          "dropdown": true,
+          "position": "left"
+        },
+        {
+          "type": "entries_count",
+          "text": "Entries",
+          "position": "left_center"
+        },
+        {
+          "type": "search_box",
+          "placeholder": "Search",
+          "position": "right",
+          "width": 200
+        }
+      ]
+    },
+    "table": {
+      "background": "#1a1a1a",
+      "border_radius": 8,
+      "headers": {
+        "height": 48,
+        "background": "#2a2a2a",
+        "text_color": "#ffffff",
+        "font_weight": "medium"
+      },
+      "rows": {
+        "height": 56,
+        "alternating_colors": false,
+        "hover_color": "#333333",
+        "selected_color": "#4f7fff20"
+      },
+      "borders": {
+        "color": "#404040",
+        "width": 1
+      }
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "#4f7fff",
+        "text_color": "#ffffff",
+        "border_radius": 6,
+        "padding": {"horizontal": 16, "vertical": 8},
+        "hover_effect": "brightness_increase"
+      },
+      "ghost": {
+        "background": "transparent",
+        "text_color": "#b0b0b0",
+        "border": "1px solid #404040",
+        "border_radius": 6,
+        "padding": {"horizontal": 12, "vertical": 8},
+        "hover_effect": "background_lighten"
+      },
+      "icon_only": {
+        "size": 32,
+        "border_radius": 6,
+        "background": "transparent",
+        "hover_effect": "background_lighten"
+      }
+    },
+    "table_elements": {
+      "checkbox": {
+        "size": 16,
+        "border_radius": 3,
+        "border_color": "#404040",
+        "checked_color": "#4f7fff"
+      },
+      "avatar": {
+        "size": 32,
+        "border_radius": "50%",
+        "border": "2px solid #404040"
+      },
+      "status_badge": {
+        "height": 20,
+        "border_radius": 10,
+        "padding": {"horizontal": 8, "vertical": 2},
+        "variants": {
+          "active": {"background": "#22c55e", "text": "#ffffff"},
+          "inactive": {"background": "#ef4444", "text": "#ffffff"}
+        }
+      },
+      "link_text": {
+        "color": "#4f7fff",
+        "hover_effect": "underline"
+      }
+    },
+    "form_elements": {
+      "dropdown": {
+        "height": 36,
+        "background": "#2a2a2a",
+        "border": "1px solid #404040",
+        "border_radius": 6,
+        "padding": {"horizontal": 12, "vertical": 8}
+      },
+      "search_input": {
+        "height": 36,
+        "background": "#2a2a2a",
+        "border": "1px solid #404040",
+        "border_radius": 6,
+        "padding": {"horizontal": 12, "vertical": 8},
+        "placeholder_color": "#808080"
+      }
+    }
+  },
+  "table_structure": {
+    "columns": [
+      {
+        "key": "selection",
+        "type": "checkbox",
+        "width": 48,
+        "sortable": false
+      },
+      {
+        "key": "admission_no",
+        "label": "Admission No",
+        "type": "link",
+        "width": 120,
+        "sortable": true
+      },
+      {
+        "key": "roll_no", 
+        "label": "Roll No",
+        "type": "text",
+        "width": 100,
+        "sortable": true
+      },
+      {
+        "key": "name",
+        "label": "Name",
+        "type": "avatar_with_text",
+        "width": 200,
+        "sortable": true
+      },
+      {
+        "key": "class",
+        "label": "Class",
+        "type": "text",
+        "width": 80,
+        "sortable": true
+      },
+      {
+        "key": "section",
+        "label": "Section", 
+        "type": "text",
+        "width": 80,
+        "sortable": true
+      },
+      {
+        "key": "gender",
+        "label": "Gender",
+        "type": "text",
+        "width": 100,
+        "sortable": true
+      },
+      {
+        "key": "status",
+        "label": "Status",
+        "type": "badge",
+        "width": 100,
+        "sortable": true
+      }
+    ]
+  },
+  "spacing": {
+    "unit": 4,
+    "scales": {
+      "xs": 4,
+      "sm": 8,
+      "md": 12,
+      "lg": 16,
+      "xl": 24,
+      "2xl": 32
+    }
+  },
+  "animations": {
+    "hover_transitions": {
+      "duration": "0.2s",
+      "easing": "ease-in-out"
+    },
+    "focus_transitions": {
+      "duration": "0.15s",
+      "easing": "ease-out"
+    }
+  },
+  "tkinter_implementation_guide": {
+    "recommended_approach": "Use ttk.Treeview for table, custom Frame classes for layout sections",
+    "key_considerations": [
+      "Use ttk.Style() to customize widget appearances",
+      "Implement custom drawing for rounded corners using Canvas",
+      "Use PhotoImage for icons (convert SVG to PNG)",
+      "Implement hover effects with bind events",
+      "Use grid geometry manager for precise layout control"
+    ],
+    "color_configuration": {
+      "method": "Configure ttk styles with fieldbackground, background, foreground properties",
+      "dark_theme_setup": "Set root window configure(bg='#1a1a1a') and style.theme_use('clam')"
+    },
+    "font_setup": {
+      "import": "from tkinter import font",
+      "definition": "font.Font(family='Inter', size=14, weight='normal')"
+    }
+  }
+}
