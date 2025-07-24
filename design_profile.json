@@ -317,22 +317,171 @@
       "easing": "ease-out"
     }
   },
-  "tkinter_implementation_guide": {
-    "recommended_approach": "Use ttk.Treeview for table, custom Frame classes for layout sections",
-    "key_considerations": [
-      "Use ttk.Style() to customize widget appearances",
-      "Implement custom drawing for rounded corners using Canvas",
-      "Use PhotoImage for icons (convert SVG to PNG)",
-      "Implement hover effects with bind events",
-      "Use grid geometry manager for precise layout control"
-    ],
-    "color_configuration": {
-      "method": "Configure ttk styles with fieldbackground, background, foreground properties",
-      "dark_theme_setup": "Set root window configure(bg='#1a1a1a') and style.theme_use('clam')"
+  "customtkinter_implementation_guide": {
+    "setup": {
+      "import": "import customtkinter as ctk",
+      "appearance_mode": "ctk.set_appearance_mode('dark')",
+      "color_theme": "ctk.set_default_color_theme('blue')",
+      "window_setup": "ctk.CTk()"
     },
-    "font_setup": {
-      "import": "from tkinter import font",
-      "definition": "font.Font(family='Inter', size=14, weight='normal')"
+    "recommended_widgets": {
+      "main_window": "ctk.CTk()",
+      "frames": "ctk.CTkFrame()",
+      "buttons": "ctk.CTkButton()",
+      "labels": "ctk.CTkLabel()",
+      "entries": "ctk.CTkEntry()",
+      "dropdowns": "ctk.CTkComboBox()",
+      "checkboxes": "ctk.CTkCheckBox()",
+      "scrollable_frame": "ctk.CTkScrollableFrame()"
+    },
+    "table_implementation": {
+      "approach": "Use CTkScrollableFrame with grid of CTkFrame rows",
+      "header_row": "CTkFrame with CTkLabels for column headers",
+      "data_rows": "CTkFrame for each row with CTkLabels, CTkButtons, etc.",
+      "selection": "CTkCheckBox in first column",
+      "hover_effect": "Configure hover_color property"
+    },
+    "styling_configuration": {
+      "custom_colors": {
+        "fg_color": "#2a2a2a",
+        "hover_color": "#333333",
+        "border_color": "#404040",
+        "button_color": "#4f7fff",
+        "button_hover_color": "#6b8fff",
+        "text_color": "#ffffff",
+        "text_color_disabled": "#808080"
+      },
+      "fonts": {
+        "title_font": "ctk.CTkFont(family='Inter', size=24, weight='bold')",
+        "heading_font": "ctk.CTkFont(family='Inter', size=18, weight='normal')",
+        "body_font": "ctk.CTkFont(family='Inter', size=14, weight='normal')",
+        "small_font": "ctk.CTkFont(family='Inter', size=12, weight='normal')"
+      }
+    },
+    "component_examples": {
+      "primary_button": {
+        "widget": "ctk.CTkButton",
+        "properties": {
+          "fg_color": "#4f7fff",
+          "hover_color": "#6b8fff",
+          "border_width": 0,
+          "corner_radius": 6,
+          "font": "ctk.CTkFont(size=14, weight='normal')",
+          "text_color": "#ffffff"
+        }
+      },
+      "ghost_button": {
+        "widget": "ctk.CTkButton",
+        "properties": {
+          "fg_color": "transparent",
+          "hover_color": "#333333",
+          "border_width": 1,
+          "border_color": "#404040",
+          "corner_radius": 6,
+          "font": "ctk.CTkFont(size=14, weight='normal')",
+          "text_color": "#b0b0b0"
+        }
+      },
+      "search_entry": {
+        "widget": "ctk.CTkEntry",
+        "properties": {
+          "fg_color": "#2a2a2a",
+          "border_color": "#404040",
+          "corner_radius": 6,
+          "font": "ctk.CTkFont(size=14, weight='normal')",
+          "text_color": "#ffffff",
+          "placeholder_text_color": "#808080"
+        }
+      },
+      "dropdown": {
+        "widget": "ctk.CTkComboBox",
+        "properties": {
+          "fg_color": "#2a2a2a",
+          "border_color": "#404040",
+          "button_color": "#404040",
+          "button_hover_color": "#555555",
+          "corner_radius": 6,
+          "font": "ctk.CTkFont(size=14, weight='normal')",
+          "text_color": "#ffffff"
+        }
+      },
+      "data_frame": {
+        "widget": "ctk.CTkFrame",
+        "properties": {
+          "fg_color": "#1a1a1a",
+          "border_width": 1,
+          "border_color": "#404040",
+          "corner_radius": 8
+        }
+      },
+      "table_header": {
+        "widget": "ctk.CTkFrame",
+        "properties": {
+          "fg_color": "#2a2a2a",
+          "corner_radius": 0,
+          "height": 48
+        }
+      },
+      "table_row": {
+        "widget": "ctk.CTkFrame",
+        "properties": {
+          "fg_color": "#1a1a1a",
+          "hover_color": "#333333",
+          "corner_radius": 0,
+          "height": 56,
+          "border_width": 0
+        }
+      },
+      "status_badge": {
+        "widget": "ctk.CTkLabel",
+        "properties": {
+          "fg_color": "#22c55e",
+          "corner_radius": 10,
+          "font": "ctk.CTkFont(size=12, weight='normal')",
+          "text_color": "#ffffff",
+          "width": 60,
+          "height": 20"
+        }
+      },
+      "avatar_frame": {
+        "widget": "ctk.CTkFrame",
+        "properties": {
+          "fg_color": "transparent",
+          "width": 32,
+          "height": 32,
+          "corner_radius": 16
+        }
+      }
+    },
+    "layout_strategy": {
+      "geometry_manager": "grid",
+      "main_container": "CTkFrame with grid layout",
+      "responsive_columns": "Configure column weights with grid_columnconfigure",
+      "sticky_headers": "Use separate frame for table headers",
+      "scrollable_content": "CTkScrollableFrame for table body"
+    },
+    "implementation_notes": [
+      "CustomTkinter automatically handles dark theme styling",
+      "Built-in hover effects for buttons and frames",
+      "Corner radius property provides rounded corners",
+      "Use grid geometry manager for precise control",
+      "CTkScrollableFrame handles overflow content automatically",
+      "Configure column weights for responsive design",
+      "Use transparent fg_color for ghost/invisible containers",
+      "Bind events to frames for row selection/hover effects"
+    ],
+    "sample_color_scheme": {
+      "background_primary": "#1a1a1a",
+      "background_secondary": "#2a2a2a", 
+      "background_tertiary": "#333333",
+      "border_color": "#404040",
+      "accent_blue": "#4f7fff",
+      "accent_blue_hover": "#6b8fff",
+      "success_green": "#22c55e",
+      "danger_red": "#ef4444",
+      "text_primary": "#ffffff",
+      "text_secondary": "#b0b0b0",
+      "text_muted": "#808080"
     }
   }
 }
