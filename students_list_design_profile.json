@@ -1,425 +1,551 @@
 {
-  "design_profile": {
-    "theme": {
-      "name": "Dark Academic Dashboard",
-      "description": "Modern dark-themed administrative interface with blue accent colors",
-      "color_palette": {
-        "primary_background": "#1a1b23",
-        "secondary_background": "#2a2d3a",
-        "surface_background": "#363a4f",
-        "accent_primary": "#4a90e2",
-        "accent_secondary": "#5ba7f7",
-        "text_primary": "#ffffff",
-        "text_secondary": "#b8bcc8",
-        "text_muted": "#6b7280",
-        "success": "#10b981",
-        "warning": "#f59e0b",
-        "error": "#ef4444",
-        "border_subtle": "#374151",
-        "hover_state": "#4b5563"
+  "design_system": {
+    "metadata": {
+      "name": "Modern Academic Dashboard",
+      "version": "1.0",
+      "description": "Professional dark-themed student management interface with sophisticated data visualization",
+      "target_framework": "tkinter",
+      "design_principles": ["consistency", "accessibility", "efficiency", "clarity"]
+    },
+    "color_system": {
+      "foundation": {
+        "primary_dark": "#1a1b23",
+        "secondary_dark": "#2a2d3a",
+        "surface_elevated": "#363a4f",
+        "surface_interactive": "#323544",
+        "brand_blue": "#4a90e2",
+        "brand_blue_light": "#5ba7f7",
+        "brand_blue_dark": "#3a7bc8"
       },
-      "typography": {
-        "font_family": "Segoe UI, Arial, sans-serif",
-        "heading_large": {
+      "semantic": {
+        "success": "#10b981",
+        "success_background": "#064e3b",
+        "error": "#ef4444",
+        "error_background": "#7f1d1d",
+        "warning": "#f59e0b",
+        "info": "#3b82f6"
+      },
+      "neutrals": {
+        "white": "#ffffff",
+        "gray_100": "#f3f4f6",
+        "gray_200": "#e5e7eb",
+        "gray_300": "#d1d5db",
+        "gray_400": "#9ca3af",
+        "gray_500": "#6b7280",
+        "gray_600": "#4b5563",
+        "gray_700": "#374151",
+        "gray_800": "#1f2937",
+        "gray_900": "#111827"
+      },
+      "text": {
+        "primary": "#ffffff",
+        "secondary": "#b8bcc8",
+        "tertiary": "#6b7280",
+        "disabled": "#4b5563",
+        "link": "#4a90e2",
+        "link_hover": "#5ba7f7"
+      }
+    },
+    "typography": {
+      "scale": {
+        "display": {
+          "size": 28,
+          "weight": "bold",
+          "line_height": 1.2,
+          "letter_spacing": -0.5
+        },
+        "h1": {
           "size": 24,
           "weight": "bold",
-          "color": "#ffffff"
+          "line_height": 1.3,
+          "letter_spacing": -0.3
         },
-        "heading_medium": {
+        "h2": {
+          "size": 20,
+          "weight": "semibold",
+          "line_height": 1.4,
+          "letter_spacing": -0.2
+        },
+        "h3": {
           "size": 18,
           "weight": "semibold",
-          "color": "#ffffff"
+          "line_height": 1.4
         },
-        "body_regular": {
+        "body_large": {
+          "size": 16,
+          "weight": "normal",
+          "line_height": 1.5
+        },
+        "body": {
           "size": 14,
           "weight": "normal",
-          "color": "#b8bcc8"
+          "line_height": 1.5
         },
         "body_small": {
           "size": 12,
           "weight": "normal",
-          "color": "#6b7280"
+          "line_height": 1.4
         },
-        "link": {
-          "size": 14,
+        "caption": {
+          "size": 11,
           "weight": "normal",
-          "color": "#4a90e2",
-          "decoration": "underline"
+          "line_height": 1.3
         }
       },
-      "spacing": {
-        "xs": 4,
-        "sm": 8,
-        "md": 16,
-        "lg": 24,
-        "xl": 32,
-        "xxl": 48
-      },
-      "border_radius": {
-        "small": 4,
-        "medium": 8,
-        "large": 12,
-        "pill": 999
+      "families": {
+        "primary": "Segoe UI",
+        "fallbacks": ["System UI", "Arial", "sans-serif"]
       }
     },
-    "layout_structure": {
-      "container": {
-        "type": "main_container",
-        "background": "#1a1b23",
-        "padding": 24,
-        "full_screen": true
+    "spacing": {
+      "base_unit": 4,
+      "scale": {
+        "0": 0,
+        "1": 4,
+        "2": 8,
+        "3": 12,
+        "4": 16,
+        "5": 20,
+        "6": 24,
+        "7": 28,
+        "8": 32,
+        "9": 36,
+        "10": 40,
+        "12": 48,
+        "16": 64,
+        "20": 80,
+        "24": 96
+      }
+    },
+    "layout_grid": {
+      "containers": {
+        "main": {
+          "max_width": "100%",
+          "padding": 24,
+          "margin": "auto"
+        },
+        "content": {
+          "max_width": 1200,
+          "padding": 16,
+          "margin": "auto"
+        }
       },
-      "header_section": {
-        "type": "header_bar",
+      "breakpoints": {
+        "small": 640,
+        "medium": 768,
+        "large": 1024,
+        "extra_large": 1280
+      }
+    },
+    "component_library": {
+      "navigation": {
+        "breadcrumb": {
+          "font_size": 12,
+          "color": "#6b7280",
+          "separator": " / ",
+          "separator_color": "#4b5563",
+          "link_color": "#4a90e2",
+          "spacing": 8
+        }
+      },
+      "buttons": {
+        "primary": {
+          "background": "#4a90e2",
+          "background_hover": "#3a7bc8",
+          "background_active": "#2563eb",
+          "background_disabled": "#374151",
+          "text_color": "#ffffff",
+          "text_color_disabled": "#6b7280",
+          "border": "none",
+          "border_radius": 6,
+          "padding_x": 16,
+          "padding_y": 8,
+          "font_size": 14,
+          "font_weight": "medium",
+          "min_height": 36,
+          "shadow": "0 1px 2px rgba(0, 0, 0, 0.1)"
+        },
+        "secondary": {
+          "background": "transparent",
+          "background_hover": "#374151",
+          "background_active": "#4b5563",
+          "text_color": "#b8bcc8",
+          "border": "1px solid #374151",
+          "border_hover": "#4b5563",
+          "border_radius": 6,
+          "padding_x": 16,
+          "padding_y": 8,
+          "font_size": 14,
+          "font_weight": "medium",
+          "min_height": 36
+        },
+        "icon_button": {
+          "size": 32,
+          "background": "transparent",
+          "background_hover": "#374151",
+          "border_radius": 4,
+          "icon_size": 16,
+          "icon_color": "#6b7280",
+          "icon_color_hover": "#b8bcc8"
+        }
+      },
+      "form_controls": {
+        "input": {
+          "background": "#363a4f",
+          "background_focus": "#363a4f",
+          "border": "1px solid #4b5563",
+          "border_focus": "1px solid #4a90e2",
+          "border_radius": 6,
+          "padding_x": 12,
+          "padding_y": 8,
+          "font_size": 14,
+          "text_color": "#ffffff",
+          "placeholder_color": "#6b7280",
+          "height": 36
+        },
+        "dropdown": {
+          "background": "#363a4f",
+          "border": "1px solid #4b5563",
+          "border_focus": "1px solid #4a90e2",
+          "border_radius": 6,
+          "padding_x": 12,
+          "padding_y": 8,
+          "font_size": 14,
+          "text_color": "#ffffff",
+          "arrow_color": "#6b7280",
+          "height": 36,
+          "dropdown_background": "#2a2d3a",
+          "dropdown_border": "1px solid #4b5563",
+          "option_hover": "#374151"
+        },
+        "checkbox": {
+          "size": 16,
+          "border": "2px solid #4b5563",
+          "border_checked": "2px solid #4a90e2",
+          "background": "transparent",
+          "background_checked": "#4a90e2",
+          "border_radius": 3,
+          "checkmark_color": "#ffffff"
+        }
+      },
+      "data_display": {
+        "badge": {
+          "active": {
+            "background": "#10b981",
+            "text_color": "#ffffff",
+            "border_radius": 4,
+            "padding_x": 8,
+            "padding_y": 4,
+            "font_size": 12,
+            "font_weight": "medium"
+          },
+          "inactive": {
+            "background": "#ef4444",
+            "text_color": "#ffffff",
+            "border_radius": 4,
+            "padding_x": 8,
+            "padding_y": 4,
+            "font_size": 12,
+            "font_weight": "medium"
+          }
+        },
+        "avatar": {
+          "small": {
+            "size": 24,
+            "border_radius": "50%",
+            "border": "1px solid #4b5563"
+          },
+          "medium": {
+            "size": 32,
+            "border_radius": "50%",
+            "border": "2px solid #4b5563"
+          },
+          "large": {
+            "size": 48,
+            "border_radius": "50%",
+            "border": "2px solid #4b5563"
+          }
+        }
+      },
+      "table": {
+        "container": {
+          "background": "#2a2d3a",
+          "border_radius": 8,
+          "border": "1px solid #374151",
+          "overflow": "hidden"
+        },
+        "header": {
+          "background": "#363a4f",
+          "height": 48,
+          "border_bottom": "1px solid #4b5563"
+        },
+        "header_cell": {
+          "padding_x": 16,
+          "padding_y": 12,
+          "font_size": 14,
+          "font_weight": "semibold",
+          "text_color": "#ffffff",
+          "sort_icon_color": "#6b7280",
+          "sort_icon_size": 14
+        },
+        "row": {
+          "height": 56,
+          "border_bottom": "1px solid #374151",
+          "background_even": "#2a2d3a",
+          "background_odd": "#323544",
+          "background_hover": "#374151",
+          "background_selected": "#4b5563"
+        },
+        "cell": {
+          "padding_x": 16,
+          "padding_y": 12,
+          "font_size": 14,
+          "text_color": "#b8bcc8",
+          "link_color": "#4a90e2"
+        }
+      }
+    },
+    "page_structure": {
+      "header": {
         "height": 80,
         "background": "#1a1b23",
-        "elements": [
-          {
-            "type": "page_title",
+        "padding": 24,
+        "elements": {
+          "title": {
             "text": "Students List",
-            "position": "left",
-            "typography": "heading_large"
+            "typography": "h1",
+            "color": "#ffffff",
+            "position": "top_left"
           },
-          {
-            "type": "breadcrumb",
-            "position": "left_below_title",
+          "breadcrumb": {
             "items": ["Dashboard", "Students", "All Students"],
-            "separator": "/",
-            "typography": "body_small"
+            "position": "bottom_left",
+            "margin_top": 4
           },
-          {
-            "type": "action_buttons",
+          "actions": {
             "position": "right",
+            "spacing": 12,
             "buttons": [
               {
-                "type": "export_button",
-                "style": "secondary",
-                "icon": "download",
+                "type": "secondary",
                 "text": "Export",
+                "icon": "download",
                 "dropdown": true
               },
               {
-                "type": "add_button",
-                "style": "primary",
-                "icon": "plus",
+                "type": "primary",
                 "text": "Add Student",
-                "color": "#4a90e2"
+                "icon": "plus"
               }
             ]
           }
-        ]
+        }
       },
-      "control_bar": {
-        "type": "control_section",
+      "controls": {
         "height": 60,
         "background": "#1a1b23",
+        "padding_x": 24,
         "margin_bottom": 16,
-        "elements": [
-          {
-            "type": "list_title",
+        "elements": {
+          "section_title": {
             "text": "Students List",
-            "position": "left",
-            "typography": "heading_medium"
+            "typography": "h3",
+            "color": "#ffffff",
+            "position": "left"
           },
-          {
-            "type": "date_range_picker",
+          "date_picker": {
             "position": "center_left",
-            "default_text": "07/17/2025 - 07/23/2025",
-            "style": "outlined"
+            "default_value": "07/17/2025 - 07/23/2025",
+            "width": 200
           },
-          {
-            "type": "filter_dropdown",
+          "filter_button": {
             "position": "center",
             "text": "Filter",
             "icon": "filter"
           },
-          {
-            "type": "view_toggles",
+          "view_toggle": {
             "position": "center_right",
-            "options": ["list", "grid"]
+            "options": ["list", "grid"],
+            "default": "list"
           },
-          {
-            "type": "sort_dropdown",
+          "sort_dropdown": {
             "position": "right",
             "text": "Sort by A-Z",
-            "icon": "sort"
+            "icon": "sort",
+            "width": 140
           }
-        ]
+        }
       },
-      "data_table": {
-        "type": "data_table",
+      "data_section": {
         "background": "#2a2d3a",
         "border_radius": 8,
-        "structure": {
-          "pagination_top": {
-            "type": "pagination_controls",
-            "position": "top_left",
-            "elements": [
-              {
-                "type": "rows_per_page",
-                "label": "Row Per Page",
-                "value": 10,
-                "dropdown": true
-              },
-              {
-                "type": "entries_info",
-                "text": "Entries"
-              }
-            ]
-          },
-          "search_bar": {
-            "type": "search_input",
-            "position": "top_right",
-            "placeholder": "Search",
-            "width": 200
-          },
-          "table_header": {
-            "type": "table_header",
-            "background": "#363a4f",
+        "margin_x": 24,
+        "padding": 0,
+        "elements": {
+          "table_controls": {
             "height": 48,
+            "padding_x": 16,
+            "background": "#2a2d3a",
+            "border_bottom": "1px solid #374151",
+            "elements": {
+              "pagination_info": {
+                "position": "left",
+                "text": "Row Per Page",
+                "dropdown_value": 10,
+                "spacing": 16
+              },
+              "entries_label": {
+                "position": "left_center",
+                "text": "Entries"
+              },
+              "search_input": {
+                "position": "right",
+                "placeholder": "Search",
+                "width": 200
+              }
+            }
+          },
+          "table": {
             "columns": [
               {
-                "name": "checkbox",
+                "key": "select",
                 "type": "checkbox",
                 "width": 40,
-                "sortable": false
+                "sortable": false,
+                "resizable": false
               },
               {
-                "name": "admission_no",
+                "key": "admission_no",
                 "label": "Admission No",
-                "type": "text",
+                "type": "link",
                 "width": 120,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "desc"
               },
               {
-                "name": "roll_no",
+                "key": "roll_no",
                 "label": "Roll No",
                 "type": "text",
                 "width": 100,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "desc"
               },
               {
-                "name": "name",
+                "key": "name",
                 "label": "Name",
-                "type": "text_with_avatar",
-                "width": 150,
+                "type": "avatar_text",
+                "width": 200,
                 "sortable": false
               },
               {
-                "name": "class",
+                "key": "class",
                 "label": "Class",
                 "type": "text",
                 "width": 80,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "asc"
               },
               {
-                "name": "section",
+                "key": "section",
                 "label": "Section",
                 "type": "text",
                 "width": 80,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "asc"
               },
               {
-                "name": "gender",
+                "key": "gender",
                 "label": "Gender",
                 "type": "text",
                 "width": 80,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "asc"
               },
               {
-                "name": "status",
+                "key": "status",
                 "label": "Status",
                 "type": "badge",
                 "width": 100,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "asc"
               },
               {
-                "name": "date_of_join",
+                "key": "date_of_join",
                 "label": "Date of Join",
                 "type": "date",
                 "width": 120,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "asc"
               },
               {
-                "name": "dob",
+                "key": "dob",
                 "label": "DOB",
                 "type": "date",
                 "width": 120,
                 "sortable": true,
-                "sort_icon": true
+                "sort_direction": "asc"
               },
               {
-                "name": "actions",
+                "key": "actions",
                 "label": "Actions",
                 "type": "actions",
                 "width": 80,
                 "sortable": false
               }
             ]
-          },
-          "table_rows": {
-            "type": "table_rows",
-            "row_height": 56,
-            "alternate_background": true,
-            "hover_effect": true,
-            "row_backgrounds": ["#2a2d3a", "#323544"]
           }
         }
       }
     },
-    "component_styles": {
-      "buttons": {
-        "primary": {
-          "background": "#4a90e2",
-          "text_color": "#ffffff",
-          "border": "none",
-          "border_radius": 6,
-          "padding": "8px 16px",
-          "font_weight": "medium",
-          "hover_background": "#3a7bc8"
-        },
-        "secondary": {
-          "background": "transparent",
-          "text_color": "#b8bcc8",
-          "border": "1px solid #374151",
-          "border_radius": 6,
-          "padding": "8px 16px",
-          "font_weight": "medium",
-          "hover_background": "#374151"
-        }
+    "interaction_patterns": {
+      "hover_effects": {
+        "duration": "200ms",
+        "easing": "ease-out",
+        "properties": ["background-color", "border-color", "color"]
       },
-      "inputs": {
-        "search_input": {
-          "background": "#363a4f",
-          "border": "1px solid #4b5563",
-          "border_radius": 6,
-          "padding": "8px 12px",
-          "text_color": "#ffffff",
-          "placeholder_color": "#6b7280",
-          "focus_border": "#4a90e2"
-        },
-        "dropdown": {
-          "background": "#363a4f",
-          "border": "1px solid #4b5563",
-          "border_radius": 6,
-          "padding": "8px 12px",
-          "text_color": "#ffffff",
-          "arrow_color": "#6b7280"
-        }
+      "focus_states": {
+        "outline": "2px solid #4a90e2",
+        "outline_offset": "2px"
       },
-      "badges": {
-        "active": {
-          "background": "#10b981",
-          "text_color": "#ffffff",
-          "border_radius": 4,
-          "padding": "4px 8px",
-          "font_size": 12,
-          "font_weight": "medium"
-        },
-        "inactive": {
-          "background": "#ef4444",
-          "text_color": "#ffffff",
-          "border_radius": 4,
-          "padding": "4px 8px",
-          "font_size": 12,
-          "font_weight": "medium"
-        }
-      },
-      "avatars": {
-        "user_avatar": {
-          "size": 32,
-          "border_radius": "50%",
-          "border": "2px solid #4b5563",
-          "margin_right": 8
-        }
-      },
-      "table": {
-        "header_cell": {
-          "background": "#363a4f",
-          "text_color": "#ffffff",
-          "font_weight": "semibold",
-          "padding": "12px 16px",
-          "border_bottom": "1px solid #4b5563"
-        },
-        "data_cell": {
-          "padding": "12px 16px",
-          "text_color": "#b8bcc8",
-          "border_bottom": "1px solid #374151"
-        },
-        "checkbox": {
-          "size": 16,
-          "border": "2px solid #4b5563",
-          "border_radius": 3,
-          "checked_background": "#4a90e2",
-          "checked_border": "#4a90e2"
-        }
-      },
-      "icons": {
-        "size_small": 16,
-        "size_medium": 20,
-        "size_large": 24,
-        "color_default": "#6b7280",
-        "color_active": "#4a90e2",
-        "color_primary": "#ffffff"
+      "loading_states": {
+        "opacity": 0.6,
+        "cursor": "not-allowed"
       }
     },
-    "interactive_states": {
-      "hover": {
-        "button_primary": "#3a7bc8",
-        "button_secondary": "#374151",
-        "table_row": "#323544",
-        "link": "#5ba7f7"
+    "tkinter_implementation": {
+      "recommended_widgets": {
+        "main_container": "tk.Frame",
+        "table": "ttk.Treeview",
+        "buttons": "tk.Button or custom Button class",
+        "inputs": "tk.Entry",
+        "dropdowns": "ttk.Combobox",
+        "checkboxes": "tk.Checkbutton"
       },
-      "active": {
-        "button_primary": "#2563eb",
-        "table_row": "#4b5563"
+      "layout_strategy": {
+        "main": "grid",
+        "header": "pack",
+        "controls": "pack",
+        "table": "grid with scrollbars"
       },
-      "focus": {
-        "input_border": "#4a90e2",
-        "button_outline": "#4a90e2"
+      "styling_approach": {
+        "colors": "Use hex values directly",
+        "fonts": "tkinter.font.Font objects",
+        "rounded_corners": "Custom drawing with Canvas if needed",
+        "hover_effects": "Bind <Enter> and <Leave> events"
       },
-      "disabled": {
-        "background": "#374151",
-        "text_color": "#6b7280",
-        "border": "#4b5563"
-      }
-    },
-    "animations": {
-      "hover_transition": "0.2s ease",
-      "button_press": "0.1s ease",
-      "dropdown_open": "0.3s ease-out",
-      "loading_fade": "0.5s ease-in-out"
-    },
-    "tkinter_implementation_notes": {
-      "fonts": {
-        "suggestion": "Use ('Segoe UI', 14) for body text, ('Segoe UI', 18, 'bold') for headings",
-        "fallback": "Use system default if Segoe UI unavailable"
-      },
-      "colors": {
-        "note": "All colors provided in hex format, compatible with tkinter color specifications"
-      },
-      "layout_manager": {
-        "recommendation": "Use grid() for table structure, pack() for header elements, place() for overlays",
-        "table_approach": "Consider using Treeview widget for the data table with custom styling"
-      },
-      "custom_widgets": {
+      "custom_components": {
         "suggestions": [
-          "Create custom button class with hover effects using bind events",
-          "Implement custom dropdown using Combobox with styling",
-          "Use Canvas for rounded corners if needed",
-          "Implement avatar display using PhotoImage with circular masking"
+          "Create StyledButton class with hover states",
+          "Implement custom Treeview styling",
+          "Build SearchableCombobox for dropdowns",
+          "Design StatusBadge widget for status indicators",
+          "Create AvatarLabel for user profile display"
         ]
       },
-      "responsive_design": {
-        "note": "Configure grid weights and sticky options for responsive behavior",
-        "column_sizing": "Use minsize and weight parameters for consistent column widths"
+      "performance_considerations": {
+        "large_datasets": "Implement virtual scrolling for tables with >1000 rows",
+        "image_handling": "Cache avatar images and use appropriate sizes",
+        "event_binding": "Use single event handler with delegation pattern"
       }
     }
   }
